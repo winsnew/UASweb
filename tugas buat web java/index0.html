@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <title>index0</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" href="CSS responsive/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS responsive/style.css">
+    <link rel="stylesheet" href="CSS responsive/responsive.css">
+    <link rel="icon" href="assets/ikon makanan/nasgor.jpg" type="image/gif" />
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+</head>
+
+
+<body class="main-layout">
+
+    
+    <div class="loader_bg">
+        <div class="loader"><img src="assets/images/loading.gif" alt="#" /></div>
+    </div>
+     
+
+    <div class="wrapper">
+
+       
+        <div class="sidebar">
+         
+        <nav id="sidebar">
+
+            <div id="dismiss">
+                <i class="fa fa-arrow-left"></i>
+            </div>
+
+            <ul class="list-unstyled components">
+                
+                <li class="active"> <a href="index0.html">Home</a></li>
+                 <li> <a href="about1.html">About</a></li>
+                                        <li> <a href="produk.html">Product</a></li>
+                                        <li> <a href="contact us.html">Contact us</a></li>
+
+            </ul>
+
+        </nav>
+      </div>
+
+      <div id="content">
+        
+        <header>
+            
+            <div class="header">
+
+                <div class="container-fluid">
+
+                    <div class="row">
+                        <div class="col-lg-3 logo_section">
+                            <div class="full">
+                                <div class="center-desk">
+                                    <div class="logo">
+                                        <a href="index0.html"><img src="assets/images/wareglogo (1).png" alt="#"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-9">
+                            <div class="right_header_info">
+                                <ul>
+                                    <li>
+                                        <a href="#"><img style="margin-right: 15px;" src="assets/images/1.png" alt="#" /></a>
+                                    </li>
+                                    <li class="tytyu">
+                                        <a href="#"><img style="margin-right: 15px;" src="assets/images/2.png" alt="#" /></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img style="margin-right: 15px;" src="assets/images/3.png" alt="#" /></a>
+                                    </li>
+
+                                    <li>
+                                        <button type="button" id="sidebarCollapse">
+                                            <img src="assets/images/menu_icon.png" alt="#" />
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </header>
+        
+        <section class="slider_section">
+            <div class="banner_main">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 mapimg">
+                            <div class="text-bg">
+                                <h1>Mampir oo rene<br> <strong class="black_bold">Auto Wareg</strong><br></h1>
+                                <a href="#">Order <i class='fa fa-angle-right'></i></a>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                            <div class="text-img">
+                                <figure><img src="assets/ikon makanan/nasgor.jpg" /></figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="overlay"></div>
+
+    <!-- Javascript files-->
+    <script src="Java script/jquery.min.js"></script>
+    <script src="Java script/popper.min.js"></script>
+    <script src="Java script/bootstrap.bundle.min.js"></script>
+    <script src="Java script/jquery-3.0.0.min.js"></script>
+    <!-- sidebar -->
+    <script src="Java script/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="Java script/custom.js"></script>
+    <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            $("#sidebar").mCustomScrollbar({
+                theme: "minimal"
+            });
+
+            $('#dismiss, .overlay').on('click', function() {
+                $('#sidebar').removeClass('active');
+                $('.overlay').removeClass('active');
+            });
+
+            $('#sidebarCollapse').on('click', function() {
+                $('#sidebar').addClass('active');
+                $('.overlay').addClass('active');
+                $('.collapse.in').toggleClass('in');
+                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+            });
+
+        });
+    </script>
+    <script>
+      
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 11,
+          center: {lat: 40.645037, lng: -73.880224},
+          });
+
+      var image = 'images/maps-and-flags.png';
+      var beachMarker = new google.maps.Marker({
+          position: {lat: 40.645037, lng: -73.880224},
+          map: map,
+          icon: image
+        });
+      }
+    </script>
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap"></script>
+     
+    
+</body>
+
+</html>
